@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ComicsService } from 'src/app/services/comics.service';
-import { Comics } from 'src/model/comics.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-itens',
@@ -10,14 +10,17 @@ import { Comics } from 'src/model/comics.model';
 export class ItensComponent implements OnInit {
 
   comics?: any
-  constructor(private comicsService: ComicsService) { }
+  constructor(private comicsService: ComicsService, private route: Router) { }
 
   ngOnInit(): void {
     this.comicsService.getCommics()
     .subscribe(comic => {
       this.comics = comic.data.results
-      console.log(this.comics)
     })
+  }
+
+  detalhes(id: number): void{
+    this.route.navigate([`comic/${id}`])
   }
 
 }

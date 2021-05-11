@@ -25,6 +25,26 @@
     font-weight: bold;
 }
 
+.button-detalhes {
+    font-size: 12px;
+    color: white;
+    background-color: rgba(165, 162, 161, 0.959);
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.button-detalhes:hover {
+    font-size: 12px;
+    color: rgb(20, 20, 20);
+    background-color: rgba(124, 122, 121, 0.959);
+    border: 1px solid rgb(24, 23, 23);
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
 mat-card-actions {
     margin-bottom: 10px;
     text-align: center;

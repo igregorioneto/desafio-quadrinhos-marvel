@@ -10,11 +10,15 @@ import { Observable } from 'rxjs';
 })
 export class ComicsService {
 
-  baseURL = 'http://gateway.marvel.com/v1/public/comics?ts=1620612352&apikey=fd3523292d2c53004a7c9c05d91c082c&hash=2628eeb38df0d333fd94f3f1b8c4a768'
-
+  baseURL = 'http://gateway.marvel.com/v1/public/comics'
+  hash = '?ts=1620612352&apikey=fd3523292d2c53004a7c9c05d91c082c&hash=2628eeb38df0d333fd94f3f1b8c4a768' 
   constructor(private http: HttpClient) { }
 
   getCommics(): Observable<any> {
-    return this.http.get<Comics[]>(this.baseURL)
+    return this.http.get<any>(`${this.baseURL}${this.hash}`)
+  }
+
+  getComic(id: number): Observable<any> {
+    return this.http.get<any>(`${this.baseURL}/${id}${this.hash}`)
   }
 }

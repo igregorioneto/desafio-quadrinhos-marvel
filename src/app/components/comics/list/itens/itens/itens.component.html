@@ -8,6 +8,12 @@
                   <h5 class="card-title">{{comic.title}}</h5>
                 </div>
                 <mat-card-actions>
+                    <button 
+                      class="button-detalhes"
+                      (click)="detalhes(comic.id)"
+                      >
+                      DETALHES
+                    </button>
                     <button class="button-item">COMPRAR</button>
                 </mat-card-actions>
             </div>
