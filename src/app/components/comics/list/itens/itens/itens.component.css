@@ -1,0 +1,41 @@
+.item-card{
+    width: 12rem;
+    font-size: 0.8rem;
+    height: 450px;
+    margin-bottom: 10px;
+}
+
+.button-item {
+    font-size: 12px;
+    color: white;
+    background-color: rgba(224, 69, 42, 0.959);
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.button-item:hover{
+    font-size: 12px;
+    color: rgb(26, 24, 24);
+    background-color: red;
+    border: 1px solid rgb(19, 18, 18);
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+mat-card-actions {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.card-img-top {
+    height: 300px;
+}
+
+.card-title {
+    font-size: 0.8rem;
+    font-weight: bold;
+    font-family: Helvetica;
+}
