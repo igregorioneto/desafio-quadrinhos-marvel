@@ -8,9 +8,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./itens.component.css']
 })
 export class ItensComponent implements OnInit {
-
+  
   comics?: any
-  constructor(private comicsService: ComicsService, private route: Router) { }
+  constructor(private comicsService: ComicsService, private router: Router) { }
 
   ngOnInit(): void {
     this.comicsService.getCommics()
@@ -20,7 +20,11 @@ export class ItensComponent implements OnInit {
   }
 
   detalhes(id: number): void{
-    this.route.navigate([`comic/${id}`])
+    this.router.navigate([`comic/${id}`])
+  }
+
+  goAddress(id: number): void {
+    this.router.navigate([`my-address/${id}`])
   }
 
 }

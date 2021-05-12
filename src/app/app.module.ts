@@ -18,7 +18,7 @@ import { ComicComponent } from './components/comics/comic/comic.component';
 import { MyComicsComponent } from './components/comics/my-comics/my-comics.component';
 import { ItensComponent } from './components/comics/list/itens/itens/itens.component';
 import { MatCardModule } from '@angular/material/card';
-
+import { MyAddressComponent } from './components/comics/my-address/my-address.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +28,7 @@ import { MatCardModule } from '@angular/material/card';
     ComicComponent,
     MyComicsComponent,
     ItensComponent,
+    MyAddressComponent,
   ],
   imports: [
     BrowserModule,

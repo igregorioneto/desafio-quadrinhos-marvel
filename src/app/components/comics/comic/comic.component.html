@@ -1,3 +1,24 @@
-<div class="container">
+<div class="container title-comic">
     <h2>Quadrinho {{id}}</h2>
+
+    <div class="row container-comic">
+        <div class="col-sm-6 img-comic">
+            <img [src]="path+'.'+extension" >
+        </div>
+        <div class="col-sm-6 detalhes-comic">
+            <h3>{{title}}</h3>
+            <h4><span>Descrição:</span> {{description}}</h4>
+            <p><span>Series:</span> {{series}}</p>
+            <p><span>Preço:</span> {{price}}</p>
+
+            <mat-card-actions>
+                <button 
+                class="button-item"
+                (click)="goAddress()">
+                    COMPRAR
+                </button>
+            </mat-card-actions>
+
+        </div>
+    </div>
 </div>
