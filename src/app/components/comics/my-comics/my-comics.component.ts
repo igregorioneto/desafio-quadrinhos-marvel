@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ComicsService } from 'src/app/services/comics.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-my-comics',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyComicsComponent implements OnInit {
 
-  constructor() { }
+  comics?: any
+  constructor(
+    private comicsService: ComicsService,
+    private router: Router) { }
 
   ngOnInit(): void {
+    this.comicsService.getComicDbFake()
+    .subscribe(comics => {
+      this.comics = comics
+    })
+  }
+
+  detalPurchase(id: number): void {
+    this.router.navigate([`detail-purchase/${id}`])
   }
 
 }

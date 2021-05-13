@@ -19,6 +19,10 @@ import { MyComicsComponent } from './components/comics/my-comics/my-comics.compo
 import { ItensComponent } from './components/comics/list/itens/itens/itens.component';
 import { MatCardModule } from '@angular/material/card';
 import { MyAddressComponent } from './components/comics/my-address/my-address.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { FormsModule } from '@angular/forms';
+import { DetailPurchaseComponent } from './components/comics/detail-purchase/detail-purchase.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +33,8 @@ import { MyAddressComponent } from './components/comics/my-address/my-address.co
     MyComicsComponent,
     ItensComponent,
     MyAddressComponent,
+    FooterComponent,
+    DetailPurchaseComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +46,9 @@ import { MyAddressComponent } from './components/comics/my-address/my-address.co
     MatButtonToggleModule,
     MatButtonModule,
     MatGridListModule,
-    MatCardModule
+    MatCardModule,
+    MatSnackBarModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

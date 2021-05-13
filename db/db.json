@@ -1,0 +1,40 @@
+{
+  "purchase": [
+    {
+      "id": 0,
+      "purchase": {
+        "comic": {
+          "title": "Official Handbook of the Marvel Universe (2004) #10 (MARVEL KNIGHTS)",
+          "series": "Official Handbook of the Marvel Universe (2004)",
+          "price": "3.99",
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/30/4bc64df4105b9",
+          "extension": "jpg"
+        },
+        "address": {
+          "name": "Armando",
+          "street": "Rua da Cunha, 44",
+          "city": "Natal-RN",
+          "country": "Brasil"
+        }
+      }
+    },
+    {
+      "purchase": {
+        "comic": {
+          "title": "Marvel Previews (2017)",
+          "series": "Marvel Previews (2017 - Present)",
+          "price": 0,
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/80/5e3d7536c8ada",
+          "extension": "jpg"
+        },
+        "address": {
+          "name": "teste",
+          "street": "teste",
+          "city": "teste",
+          "country": "teste"
+        }
+      },
+      "id": 1
+    }
+  ]
+}

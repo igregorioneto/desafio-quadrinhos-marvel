@@ -3,39 +3,75 @@
 
     <div class="row">
         <div class="col-sm">
-            <iframe
-            width="400"
-            height="450"
-            style="border:0"
-            loading="lazy"
-            allowfullscreen
-            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCfhuZYC4e65MjKe3kv-98j4tHstOcy2-0
-                &q=Natal+BR">
-            </iframe>
+            <div class="img-address">
+                <h3>Titulo: {{title}}</h3>
+                <img [src]="path+'.'+extension" alt="">
+            </div>
+            <div class="info-address">
+                <span>Series:</span>
+                <p> {{series}}</p>
+
+                <span>Descrição:</span> 
+                <p>{{description}}</p>
+
+                <span>Preço:</span> 
+                <p>{{price}}</p>
+            </div>
         </div>
 
         <div class="col-sm">
-            <form>
-                <div class="form-group">
-                  <label>Nome:</label>
-                  <input type="nome" class="form-control" placeholder="Digite seu nome">
-                </div>
 
-                <div class="form-group">
-                    <label>Rua:</label>
-                    <input type="rua" class="form-control" placeholder="Rua para entrega">
-                </div>
+            <div class="col-sm">
 
-                <div class="form-group">
-                    <label>Cidade:</label>
-                    <input type="nome" class="form-control" placeholder="Qual cidade?">
-                </div>
+                <h3>Preencha os dados para envio do produto</h3>
+                <iframe class="map-my-addess"
+                allowfullscreen
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCfhuZYC4e65MjKe3kv-98j4tHstOcy2-0
+                    &q=Paraíba+BR">
+                </iframe>
+            </div>
+            <div class="col-sm">
+                <form>
+                    <div class="form-group">
+                      <label>Nome:</label>
+                      <input class="form-control" name="name" placeholder="Digite seu nome" 
+                      [(ngModel)]="name" >
+                    </div>
+    
+                    <div class="form-group">
+                        <label>Rua:</label>
+                        <input class="form-control" name="street" placeholder="Rua para entrega" 
+                        [(ngModel)]="street" [disabled]="name === ''">
+                    </div>
+    
+                    <div class="form-group">
+                        <label>Cidade:</label>
+                        <input class="form-control" name="city" placeholder="Qual cidade?" 
+                        [(ngModel)]="city" [disabled]="street === ''">
+                    </div>
+    
+                    <div class="form-group">
+                        <label>País:</label>
+                        <input class="form-control" name="country" placeholder="Qual país?" 
+                        [(ngModel)]="country" [disabled]="city === ''">
+                    </div>
 
-                <div class="form-group">
-                    <label>País:</label>
-                    <input type="pais" class="form-control" placeholder="Qual país?">
-                </div>
-              </form>
+                    <mat-card-actions>
+                        <button 
+                        class="button-item-cancel"
+                        (click)="cancel()"
+                        >CANCELAR
+                        </button>
+                        <button 
+                        class="button-item"
+                        (click)="effectuatePurchase()"
+                        [disabled]="name === '' && street === '' && city === '' && country === ''"
+                        >COMPRAR
+                        </button>
+                    </mat-card-actions>
+                  </form>
+            </div>
+            
         </div>
     </div>
 </div>

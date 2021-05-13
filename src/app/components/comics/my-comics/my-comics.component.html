@@ -1,3 +1,26 @@
 <div class="container">
     <h2>Lista de Quadrinhos</h2>
+    <div class="container">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm" *ngFor="let comic of comics">
+              <div class="card item-card">
+                <img class="card-img-top" [src]="comic.purchase.comic.path +'.'+ comic.purchase.comic.extension" alt="Imagem de capa do card">
+                  <div class="card-body">
+                    <h5 class="card-title">{{comic.purchase.comic.title}}</h5>
+                  </div>
+                  <mat-card-actions>
+                      <button 
+                        class="button-detalhes"
+                        (click)="detalPurchase(comic.id)"
+                        >
+                        DETALHES DO PEDIDO
+                      </button>
+                  </mat-card-actions>
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
+  
 </div>
