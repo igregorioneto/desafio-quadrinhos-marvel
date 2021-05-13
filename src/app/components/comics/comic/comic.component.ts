@@ -34,10 +34,9 @@ export class ComicComponent implements OnInit {
       this.extension = this.comic[0].thumbnail.extension
 
       this.title = this.comic[0].title
-      this.description = this.comic[0].description
+      this.description = this.comic[0].description ? this.comic[0].description : 'Descrição em falta...'
       this.series = this.comic[0].series.name
       this.price = this.comic[0].prices[0].price
-      console.log(this.comic)
     })
   }
 
